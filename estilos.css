@@ -1,0 +1,18 @@
+/*css document*/
+@charset "utf-8";
+
+header nav{
+    background-color: #1878b2;
+}
+header nav a {
+    font-size: 1rem;
+    text-decoration-line: none;
+    color:#ffffff;
+    justify-content:right;
+}
+footer {
+    color: #ffffff;
+    font-size: 2rem;
+    background-color: #1878b2;
+    text-align: center;
+}
