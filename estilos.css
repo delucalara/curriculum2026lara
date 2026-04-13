@@ -11,32 +11,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-height: max-content;
-    min-height: min-content;
 }
 
-nav {
-    min-height: 20vh;
+header {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: baseline;
-    padding: 20px;
-    gap: 20px;
-    width: 1200px;
+    flex-direction: column;
+}
+
+body {
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 nav a {
     color: aliceblue;
 }
 
-header nav {
+nav {
+    align-self: flex-start;
     background-color: #1878b2;
-    background-size: cover;
-    border-radius: 0px 0px 0px 120px;
+    border-radius: 0 0 80px 0;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 h1 {
+    padding: 0 0 20px 0;
     text-align: center;
 }
 
@@ -44,54 +48,125 @@ h2 {
     font-family: "Lobster", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2.2REM;
+    font-size: 2.4rem;
     color: #d83d31;
-    line-height: 3.5rem;
+    line-height: 5rem;
 }
 
 h3 {
-    font-family: "Lobster", sans-serif;
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-size: 1.3rem;
     color: #1878b2;
     line-height: 2rem;
 }
 
-.miperfil {
-    text-align: right;
-    padding: 20px;
-    min-height: 20vh;
-    background-color: #86a6b9;
-    border-radius: 120px 0px 0px 120px;
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.bloqueinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 80px;
+    padding: 0 5%;
+}
+
+div p {
+    line-height: 1.5rem;
+    word-spacing: 0.2rem;
+    color: #0a2f46;
+    text-align:justify;
+}
+
+.educacion,
+.experiencia {
+    min-width: 0;
+    flex: 1;
+}
+
+
+#miperfil {
+    background: linear-gradient(105deg, #e1f5ff 0%, #1878b2 100%);
+    border-radius: 80px 0px 0px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#miperfil img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+figcaption {
+    color: #0a2f46;
+    font-size: 1.2rem;
+    margin: 5px 25px 30px 25px;
+    max-width: 220px;
+    font-weight: bold;
+    word-spacing: 0.2rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    width: 30%;
+}
+
+.sobre-mi {
+    line-height: 3.5rem;
+    text-align: center;
+}
+
+.sobre-mi p {
+    text-align: left;
+    font-size: 1.2rem;
 }
 
 aside {
-    text-align: center;
     padding: 20px;
-    height: 40px;
-    min-height: 20vh;
+    margin: 40px 0 0 0;
+    height: 115px;
     line-height: 1rem;
+    background-color: #1878b2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+aside p {
+    color: aliceblue;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    width: 400px;
+    text-align: center;
+}
+
+aside img {
+    align-self: center;
 }
 
 footer {
-    text-align: center;
-}
-
-.Educación {
-    padding: 60px;
-    min-height: 20vh;
-    max-width: 480px;
-}
-
-.Educación p {
-    line-height: 2rem;
-}
-
-.Experiencia {
-    padding: 60px;
-    min-height: 20vh;
-    max-width: 480px;
-}
-
-.Experiencia p {
-    line-height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #e1f5ff;
 }
