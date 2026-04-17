@@ -87,6 +87,13 @@ div p {
     text-align:justify;
 }
 
+ul li{
+    line-height: 1.5rem;
+    word-spacing: 0.2rem;
+    color: #0a2f46;
+    text-align:justify;
+}
+
 .educacion,
 .experiencia {
     min-width: 0;
