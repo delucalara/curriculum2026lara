@@ -1,67 +1,56 @@
 /*css document*/
 @charset "utf-8";
 
-/*configuración tipográfica*/
-
+/*CONFIGURACIÓN GENERAL*/
 * {
     font-family: "Lato", sans-serif;
-    text-decoration: none;
-    list-style-type: none;
     font-size: 0.9rem;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(img/fondo.jpg);
+    background-size:cover;
+    background-attachment:scroll; 
+    min-height: 100vh;
+}
+
+/*ENCABEZADO*/
 header {
-    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-body {
-    background-image: url(img/background.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-nav a {
-    color: aliceblue;
+header img {
+    align-self: center;
 }
 
 nav {
     align-self: flex-start;
     background-color: #1878b2;
     border-radius: 0 0 80px 0;
-    padding: 10px 30px;
+    padding: 10px 60px 10px 30px;
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
 h1 {
-    padding: 0 0 20px 0;
     text-align: center;
+    padding: 35px 0 0 0;
+    font-family: "Lato", sans-serif;
+    color: #818181;
+    font-size: 1.5rem;
 }
 
-h2 {
-    font-family: "Lobster", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2.4rem;
-    color: #d83d31;
-    line-height: 5rem;
-}
-
-h3 {
-    font-family: "Noto Sans Mono", monospace;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 1.3rem;
-    color: #1878b2;
-    line-height: 2rem;
-}
-
+/*CUERPO Y CONTENEDORES*/
 main {
     display: flex;
     flex-direction: row;
@@ -80,26 +69,63 @@ main {
     padding: 0 5%;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+}
+
+/*TIPOGRAFIA GENERAL*/
+h2 {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-size: 2.4rem;
+    color: #d83d31;
+}
+
+
+h3 {
+    font-family: "Noto Sans Mono", monospace;
+    font-size: 1.5rem;
+    color: #1878b2;
+}
+
+h3:hover {
+    color: #d83d31;
+    font-size: 1.6rem;
+}
+
 div p {
     line-height: 1.5rem;
     word-spacing: 0.2rem;
     color: #0a2f46;
-    text-align:justify;
+    text-align: justify;
 }
 
-ul li{
+ul {
+    list-style-type: none;
+}
+
+ul li {
     line-height: 1.5rem;
     word-spacing: 0.2rem;
     color: #0a2f46;
-    text-align:justify;
+    text-align: justify;
 }
 
+/*CONTENEDORES ESPECÍFICOS*/
 .educacion,
 .experiencia {
-    min-width: 0;
     flex: 1;
 }
 
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 20px;
+}
 
 #miperfil {
     background: linear-gradient(105deg, #e1f5ff 0%, #1878b2 100%);
@@ -114,6 +140,13 @@ ul li{
     max-width: 100%;
     height: auto;
     border-radius: 50%;
+    transition: transform 0.6s ease-in-out;
+    backface-visibility: visible;
+}
+
+#miperfil img:hover {
+    transform: rotateY(360deg);
+    content: url("img/mifoto-nueva.png");
 }
 
 figcaption {
@@ -123,14 +156,6 @@ figcaption {
     max-width: 220px;
     font-weight: bold;
     word-spacing: 0.2rem;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 20px;
-    width: 30%;
 }
 
 .sobre-mi {
@@ -143,31 +168,27 @@ section {
     font-size: 1.2rem;
 }
 
+/*APARTADOS Y DETALLES FINALES*/
 aside {
-    padding: 20px;
+    padding: 30px 20px 30px 20px;
     margin: 40px 0 0 0;
-    height: 115px;
-    line-height: 1rem;
     background-color: #1878b2;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 50px;
 }
+
 
 aside p {
     color: aliceblue;
     font-family: "Lato", sans-serif;
     font-weight: 700;
-    font-style: normal;
     font-size: 1.2rem;
     line-height: 1.5rem;
-    width: 400px;
+    max-width: 400px;
     text-align: center;
-}
-
-aside img {
-    align-self: center;
 }
 
 footer {
